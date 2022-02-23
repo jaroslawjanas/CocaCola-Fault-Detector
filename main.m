@@ -12,31 +12,31 @@ addpath("utils\");
 
 %% Folder paths
 
-% path_to_folder = "../images/1-Underfilled";
-% path_to_folder = "../images/1-NotUnderfilled";
+% path_to_folder = "./images/1-Underfilled";
+% path_to_folder = "./images/1-NotUnderfilled";
 
-% path_to_folder = "../images/2-Overfilled";
-% path_to_folder = "../images/2-NotOverfilled";
+% path_to_folder = "./images/2-Overfilled";
+% path_to_folder = "./images/2-NotOverfilled";
 
-% path_to_folder = "../images/3-Cap";
-% path_to_folder = "../images/3-NoCap";
+% path_to_folder = "./images/3-Cap";
+% path_to_folder = "./images/3-NoCap";
 
-% path_to_folder = "../images/4-Label";
-% path_to_folder = "../images/4-NoLabel";
+% path_to_folder = "./images/4-Label";
+% path_to_folder = "./images/4-NoLabel";
 
-% path_to_folder = "../images/5-LabelStraight";
-% path_to_folder = "../images/5-LabelNotStraight";
+% path_to_folder = "./images/5-LabelStraight";
+% path_to_folder = "/images/5-LabelNotStraight";
 
-% path_to_folder = "../images/6-Deformed";
-% path_to_folder = "../images/6-NotDeformed";
+% path_to_folder = "./images/6-Deformed";
+% path_to_folder = "./images/6-NotDeformed";
 
-% path_to_folder = "../images/7-MiddleBottle";
-% path_to_folder = "../images/7-NoMiddleBottle";
+% path_to_folder = "./images/7-MiddleBottle";
+% path_to_folder = "./images/7-NoMiddleBottle";
 
-% path_to_folder = "../images/8-LabelPrint";
-% path_to_folder = "../images/8-NoLabelPrint";
+% path_to_folder = "./images/8-LabelPrint";
+% path_to_folder = "./images/8-NoLabelPrint";
 
-% path_to_folder = "../images/All";
+path_to_folder = "./images/All";
 
 %path_to_folder = uigetdir("Select image folder");
 
