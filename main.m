@@ -25,7 +25,7 @@ addpath("utils\");
 % path_to_folder = "./images/4-NoLabel";
 
 % path_to_folder = "./images/5-LabelStraight";
-% path_to_folder = "/images/5-LabelNotStraight";
+% path_to_folder = "./images/5-LabelNotStraight";
 
 % path_to_folder = "./images/6-Deformed";
 % path_to_folder = "./images/6-NotDeformed";
@@ -36,9 +36,9 @@ addpath("utils\");
 % path_to_folder = "./images/8-LabelPrint";
 % path_to_folder = "./images/8-NoLabelPrint";
 
-path_to_folder = "./images/All";
+% path_to_folder = "./images/All";
 
-%path_to_folder = uigetdir("Select image folder");
+path_to_folder = uigetdir("Select image folder");
 
 %% Paths of imgs in the folder
 input_imgs_paths = dir(fullfile(path_to_folder, "*.jpg"));
@@ -46,8 +46,7 @@ total_img_count = length(input_imgs_paths);
 % Randomise for debugging purposes
 r_input_imgs_paths = input_imgs_paths(randperm(total_img_count));
 
-%% Processing pipeline
-% Load each img
+%% Stats
 missing = 0;
 straight = 0;
 caps = 0;
@@ -56,6 +55,8 @@ underfilled = 0;
 labelled = 0;
 labelPrint = 0;
 deformed = 0;
+% goodBottles = 0;
+% badBottles = 0;
 
 %% Loop over the images
 for current_img = 1 : length(r_input_imgs_paths)
@@ -71,9 +72,15 @@ for current_img = 1 : length(r_input_imgs_paths)
     
     %% Crop the middle bottle perfectly
     img = bottleCrop(img);
-%     imshow(img);
-%     pause(0.2);
     
+    %% Good and Bad bottle counter (implemented at the end)
+%     if hasCap(img) && ~isOverfilled(img) && ~isUnderfilled(img) ...
+%             && ~isDeformed(img) && hasLabel(img) ...
+%             && isLabelStraight(img) && isLabelPrint(img)
+%         goodBottles = goodBottles + 1;
+%     else
+%         badBottles = badBottles + 1;
+%     end
 
     %% Detection pipeline
     caps = caps + hasCap(img);
@@ -114,6 +121,11 @@ disp("Missing: " + missing + "/" + total_img_count + ...
 disp("Label Print: " + labelPrint + "/" + total_img_count + ...
     "  (" + labelPrint * 100 / total_img_count + "%)");
 
+% disp("Good Bottles: " + goodBottles + "/" + (goodBottles + badBottles) + ...
+%     "  (" + goodBottles * 100 / (goodBottles + badBottles) + "%)");
+% 
+% disp("Bad Bottles: " + badBottles + "/" + (goodBottles + badBottles) + ...
+%     "  (" + badBottles * 100 / (goodBottles + badBottles) + "%)");
 
 %% Undock the figure window
 set(0, "DefaultFigureWindowStyle", "normal");

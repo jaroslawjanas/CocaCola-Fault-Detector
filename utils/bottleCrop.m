@@ -41,7 +41,6 @@ function [out] = bottleCrop(img)
 %     xline(border2, LineWidth=2, Color="cyan");
 %     pause;
 %     hold off;
-%     pause(0.5);
 
     % Crop the image using the calculated borders
     out = imcrop(img, [border1, 0, (border2 - border1), size(img, 1)]);

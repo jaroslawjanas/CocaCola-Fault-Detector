@@ -1,7 +1,7 @@
 function [out] = hasLabel(img)
 
     %% Crop out the label area
-    I = imcrop(img, [0, 180, 161 , size(img, 1)-180]);
+    I = imcrop(img, [0, 180, size(img, 2) , size(img, 1)-180]);
 
     %% Histogram with 3 bins, where bin no. 1 captures the label
     Z = imhist(I, 3);

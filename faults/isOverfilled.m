@@ -1,7 +1,7 @@
 function [out] = isOverfilled(img)
 
     %% Crop out the area above normal fill level
-    I = imcrop(img, [20, 60, 120, 80]);
+    I = imcrop(img, [5, 60, 120, 80]);
     
     %% Get a histogram with 3 bins
     Z = imhist(I, 3);

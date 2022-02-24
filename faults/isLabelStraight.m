@@ -1,3 +1,5 @@
+% Requires isAnyRowAll function - imported in main
+
 function [out] = isLabelStraight(img)
 
     %% Crop out the label
@@ -11,12 +13,13 @@ function [out] = isLabelStraight(img)
 %     BI = imdilate(BI, se_horz);
 
     %% Dilate the edges vertically (to remove gaps and combat label curvature)
-    se_vert = strel("line", 4, 90);
+    se_vert = strel("line", 3, 90);
     BI = imdilate(BI, se_vert);
 
     %% Crop the top edge of the label
-    BI = imcrop(BI, [48, 20, 65, 30]);
-    
+%     BI = imcrop(BI, [48, 20, 65, 30]);
+    BI = imcrop(BI, [40, 20, size(BI, 2) - 80, 30]);
+
     %% Check if any row in the matrix is all 1s
     if isAnyRowAll(BI, 1)
         out = 1;
