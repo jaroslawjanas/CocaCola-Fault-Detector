@@ -1,4 +1,4 @@
-# cocacola-fault-detector
+# CocaCola-Fault-Detector
 This document describes the design and development of a vision system developed for Assignment 1 of the EE551 Embedded Image Processing module.
 
 ## Introduction
