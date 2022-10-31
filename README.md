@@ -12,6 +12,7 @@ In a scenario where multiple faults occur in the same bottle, each defect is cla
 The provided dataset consisted of ambiguous cases and, for this project, was re-worked to reflect the problem better. Below are described the definitions by which the dataset was modified.
 
 ### Overfilled
+![Overfilled](readme/2.png)
 Any bottle whose liquid level exceeded the norm (as shown in the picture above) is considered overfilled regardless of the reason behind the increased level, e.g. bottle deformation.
 
 ### Underfilled
