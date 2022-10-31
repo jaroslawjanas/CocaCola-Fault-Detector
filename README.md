@@ -13,6 +13,7 @@ The provided dataset consisted of ambiguous cases and, for this project, was re-
 
 ### Overfilled
 ![Overfilled](readme/2.png)
+
 Any bottle whose liquid level exceeded the norm (as shown in the picture above) is considered overfilled regardless of the reason behind the increased level, e.g. bottle deformation.
 
 ### Underfilled
