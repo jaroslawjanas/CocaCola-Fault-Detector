@@ -19,7 +19,7 @@ Any bottle whose liquid level exceeded the norm (as shown in the picture above) 
 ### Underfilled
 Similarly, bottles with liquid levels falling below the previously established norm are viewed as underfilled.
 
-### Lavel Not Straight
+### Label Not Straight
 As shown below, any tilted or misaligned labels are considered not straight. However, the label will be regarded as straight if a bottle is deformed, but the label remains straight with respect to the deformity.
 
 | Straight | Not Straight | Straight |
@@ -102,7 +102,7 @@ To detect those dips, a derivative is calculated, and the positions of min and m
 | :---: | :---: |
 | ![Second Derivative](readme/12.png) | ![Second Derivative](readme/13.png)
 
-Having these two positions describing the beginning and end of the neck of the bottle, the edges of the bottle can be calculated with the following formulas **B<sub>left</sub> = p<sub>min</sub> – (r<sub>b</sub> – r<sub>c</sub>) and B<sub>right</sub> = p<sub>max</sub> + (r<sub>b</sub> – r<sub>c</sub>)** where **B** is the position of the edge of the bottle, **p** is the position of the min/max values of the derivative, **r<sub>b</sub>** is the radius of the bottle and **r<sub>c</sub>** is the radius of the bottle’s cap/neck. The final result of this calculation can be seen below.
+Having these two positions describing the beginning and end of the neck of the bottle, the edges of the bottle can be calculated with the following formulas **B<sub>left</sub> = p<sub>min</sub> – (r<sub>b</sub> – r<sub>c</sub>)** and **B<sub>right</sub> = p<sub>max</sub> + (r<sub>b</sub> – r<sub>c</sub>)** where **B** is the position of the edge of the bottle, **p** is the position of the min/max values of the derivative, **r<sub>b</sub>** is the radius of the bottle and **r<sub>c</sub>** is the radius of the bottle’s cap/neck. The final result of this calculation can be seen below.
 
 | | |
 | :---: | :---: |
