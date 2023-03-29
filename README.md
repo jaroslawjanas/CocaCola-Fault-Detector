@@ -292,7 +292,7 @@ Below is shown the single false positive case. The algorithm failed to classify 
 
 ![FP3](readme/53.png)
 
-### Label Has Pring
+### Label Has Print
 
 | | True | False |
 | :---: | :---: | :---: |
